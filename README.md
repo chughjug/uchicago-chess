@@ -121,6 +121,11 @@ const sharp = require('sharp');
 (Playfair), the club maroon used sparingly, and a lancet arch as the only
 gothic flourish.
 
+**After changing `css/site.css` or a script, bump its `?v=` number on every
+page** (`css/site.css?v=2` → `?v=3`; one find-and-replace across the `.html`
+files). GitHub Pages lets browsers keep those files for ten minutes, so
+without a new number a visitor can get the new page with the old styles.
+
 ## Previewing locally
 
 Serve the folder's parent so the site sits under the same sub-path it has on

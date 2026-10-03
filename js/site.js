@@ -20,16 +20,20 @@
    ============================================================ */
 
 var SITE = {
-  /** The club's standing meeting. Used in the hero and the footer. */
+  /** The club's standing meeting. Used in the hero, the footer, and the events list. */
   meeting: {
     whenLabel: 'Mondays, 8:00 PM',
+    /** Start and end, for the events list row. */
+    start: '8:00pm',
+    end: '10:00pm',
+    recurring: 'Mondays',
     cadence: 'every week of term',
     place: 'Cox Lounge',
     placeDetail: 'Stuart Hall basement',
     placeFull: 'Cox Lounge, basement of Stuart Hall',
     /** The line under the meeting in the footer. */
     terms: 'No signup, no dues, no rating requirement. Boards and clocks provided.',
-    /** What happens at one, for search results. */
+    /** What happens at one, for the events list. */
     blurb: 'Casual games, blitz, and coaching. All levels welcome.',
     /** Two short facts beside the meeting in the hero. */
     cost: 'Free',
@@ -78,12 +82,17 @@ var SITE = {
     blueprint: 'https://blueprint.uchicago.edu/organization/chess',
   },
 
+  /** The events page. The events on it are in js/events.js. */
+  events: {
+    page: 'events.html',
+  },
+
   /** For the structured data below: what search engines are told about the club. */
   org: {
     name: 'University of Chicago Chess Club',
     shortName: 'UChicago Chess',
-    url: 'https://chughjug.github.io/uchicago-chess/',
-    logo: 'https://chughjug.github.io/uchicago-chess/img/crest.png',
+    url: 'https://uchicago.chessdirector.com/',
+    logo: 'https://uchicago.chessdirector.com/img/crest.png',
     description:
       'The University of Chicago Chess Club. Every experience level, from a first game to Grandmaster.',
     venue: {
@@ -208,7 +217,7 @@ function publishStructuredData() {
 
   // The standing meeting, as an event series: the one thing a student
   // searching for the club actually wants to know.
-  if (document.querySelector('.masthead')) {
+  if (document.getElementById('preview')) {
     graph.push({
       '@type': 'EventSeries',
       name: 'UChicago Chess Club weekly meeting',

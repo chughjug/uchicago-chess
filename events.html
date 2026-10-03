@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Who We Are &mdash; University of Chicago Chess Club</title>
-<meta name="description" content="Board members and the constitution of the University of Chicago Chess Club.">
-<link rel="canonical" href="https://chughjug.github.io/uchicago-chess/leadership.html">
+<title>Events &mdash; University of Chicago Chess Club</title>
+<meta name="description" content="Upcoming events at the University of Chicago Chess Club: tournaments, team matches, socials, and the weekly Monday meeting.">
+<link rel="canonical" href="https://chughjug.github.io/uchicago-chess/events.html">
 
 <!-- Link previews: Discord, Facebook, iMessage and X all read these, and
      none of them run JavaScript, so this is the one place the club is
      described in the file rather than in js/site.js. -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="UChicago Chess">
-<meta property="og:title" content="Who We Are — University of Chicago Chess Club">
-<meta property="og:description" content="Board members and the constitution of the University of Chicago Chess Club.">
-<meta property="og:url" content="https://chughjug.github.io/uchicago-chess/leadership.html">
+<meta property="og:title" content="Events — University of Chicago Chess Club">
+<meta property="og:description" content="Upcoming events at the University of Chicago Chess Club: tournaments, team matches, socials, and the weekly Monday meeting.">
+<meta property="og:url" content="https://chughjug.github.io/uchicago-chess/events.html">
 <meta property="og:image" content="https://chughjug.github.io/uchicago-chess/img/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -42,8 +42,8 @@
     <button id="navbtn" aria-expanded="false" aria-controls="navmenu">Menu</button>
     <ul id="navmenu">
       <li><a href="./">Home</a></li>
-      <li><a href="events.html">Events</a></li>
-      <li><a class="active" href="leadership.html">Who We Are</a></li>
+      <li><a class="active" href="events.html">Events</a></li>
+      <li><a href="leadership.html">Who We Are</a></li>
       <li><a href="resources.html">Resources</a></li>
       <li><a href="sponsors.html">Sponsors</a></li>
     </ul>
@@ -53,8 +53,8 @@
 <header class="pagehead">
   <div class="container">
     <p class="eyebrow">UChicago Chess</p>
-    <h1>Who We Are</h1>
-    <p>The people running things, and how to become one of them.</p>
+    <h1>Events</h1>
+    <p>Tournaments, team matches and socials through the season &mdash; and every Monday, the club itself. Everything is open to everyone.</p>
   </div>
 </header>
 
@@ -62,14 +62,15 @@
   <section class="band">
     <div class="container">
       <div class="block">
-        <h2>Leadership Team</h2>
-        <p class="lede">
-          Elected by club members each Spring, in office from Autumn. All five of us are at most
-          meetings &mdash; say hi in person, or find us on Discord.
-        </p>
-        <!-- Built from SITE.officers in js/site.js — put the names in there. -->
-        <div class="grid g3" id="officers"></div>
+        <h2>Upcoming</h2>
+        <!-- Built from EVENTS in js/events.js — add and change events there. -->
+        <div class="eventlist" id="upcoming">
+          <noscript>
+            <div class="empty">The events list needs JavaScript. The club meets every Monday at 8:00 PM in
+              Cox Lounge, and everything else is announced on Discord.</div>
+          </noscript>
         </div>
+        <p class="note" id="examples-note" hidden>Events tagged Example are placeholders while this season&rsquo;s calendar is set.</p>
       </div>
     </div>
   </section>
@@ -77,22 +78,8 @@
   <section class="band alt">
     <div class="container">
       <div class="block">
-        <h2>Who Does What</h2>
-        <p class="lede">
-          Five elected roles, and what each one is actually on the hook for.
-        </p>
-        <table>
-          <thead>
-            <tr><th scope="col">Position</th><th scope="col">The gist</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>President</td><td>Runs the club day to day &mdash; meetings, events, and keeping the rest of us on track. Also our rep to the Coalition of Academic Teams.</td></tr>
-            <tr><td>Vice President</td><td>Backs up the President, handles the paperwork nobody else wants, and fills in when they&rsquo;re away.</td></tr>
-            <tr><td>Treasurer</td><td>Looks after the budget and gets your reimbursements back to you.</td></tr>
-            <tr><td>Chair of Volunteering</td><td>Runs the teaching program and keeps us plugged into the Hyde Park and wider Chicago chess scene.</td></tr>
-            <tr><td>Chair of Inclusivity &amp; Outreach</td><td>Brings new people in, and makes sure the club stays a place they want to stay.</td></tr>
-          </tbody>
-        </table>
+        <h2>Past Events</h2>
+        <div class="eventlist" id="past"></div>
       </div>
     </div>
   </section>
@@ -100,26 +87,21 @@
   <section class="band">
     <div class="container">
       <div class="block">
-        <h2>Constitution</h2>
+        <h2>Never Miss One</h2>
         <p>
-          The full rules, if you&rsquo;re into that sort of thing. Elections are ranked-choice among
-          club members &mdash; and if there is ever a perfect tie, the candidates settle it over the
-          board, best of two at Game/15. Easily our favorite clause.
+          Every event is announced on Discord first, with the room, the time and anything you need
+          to bring. Got an idea for one &mdash; a tournament, a talk, a trip? Tell the officers there.
         </p>
-        <p class="after">
-          <a class="btn" href="https://docs.google.com/document/d/15r7_7iVhIMptKZsmfSLF7DGaoewCdpnS/edit?usp=sharing&amp;ouid=101326634033454197551&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener">Read the constitution</a>
+        <p class="actions">
+          <a class="btn" href="https://discord.com/invite/wnuyjCKNdM" data-site-href="links.discord" target="_blank" rel="noopener">
+            <svg class="ico" aria-hidden="true"><use href="img/icons.svg#discord"></use></svg> Join the Discord
+          </a>
+          <a class="btn alt" href="https://www.instagram.com/uchicagochess/" data-site-href="links.instagram" target="_blank" rel="noopener">Follow on Instagram</a>
         </p>
       </div>
     </div>
   </section>
 </main>
-
-<div class="sponsorbar">
-  <div class="container">
-    <span>Proudly sponsored by</span>
-    <a href="sponsors.html"><img src="img/jane-street.svg" alt="Jane Street"></a>
-  </div>
-</div>
 
 <footer class="arched">
   <div class="container">
@@ -175,5 +157,6 @@
 
 <script src="js/site.js"></script>
 <script src="js/nav.js"></script>
+<script src="js/events.js"></script>
 </body>
 </html>

@@ -1,12 +1,13 @@
 # UChicago Chess Club — the club's site
 
 The University of Chicago Chess Club's own site, served by GitHub Pages at
-**https://chughjug.github.io/uchicago-chess/**. Four hand-written HTML pages,
-one stylesheet, two small scripts. No build step: edit a file, commit to the
+**https://chughjug.github.io/uchicago-chess/**. Five hand-written HTML pages,
+one stylesheet, three small scripts. No build step: edit a file, commit to the
 `gh-pages` branch, and GitHub Pages publishes it within a minute or two.
 
-This is the club site without the events platform: no events list, no
-calendar feed, nothing that calls a server. Every page is a static file.
+This is the club site without the events platform: nothing calls a server,
+and every page is a static file. The events page is a list you keep by hand
+(below).
 
 ## Changing the content
 
@@ -37,6 +38,36 @@ The two `EDIT-WITH-SITE.JS` spots are the `<meta name="description">` and
 `og:description` on the home page, which quote the meeting time. They have to
 be plain HTML because Discord, Facebook and Google read the file without
 running JavaScript.
+
+## Events
+
+The events page (`events.html`) is built from **[`js/events.js`](js/events.js)**:
+one entry per event in `EVENTS` at the top of the file.
+
+```js
+{
+  title: 'Autumn Blitz Night',
+  date: '2026-10-16',          // leave out for "Date TBA"
+  start: '7:00 PM', end: '10:00 PM',
+  where: 'Cox Lounge, Stuart Hall',
+  type: 'Tournament',          // the tag beside the title
+  desc: 'Five-minute games, as many rounds as we can fit.',
+  link: { label: 'Register', url: 'https://…' },
+},
+```
+
+Only `title` is required; `endDate` covers an event over more than one day.
+Order does not matter — the page sorts them, and moves an event from Upcoming
+to Past by itself the day after it ends. Upcoming events with a date get an
+*Add to calendar* link (Google Calendar, Chicago time) made from the same
+values. The weekly Monday meeting is not in the list: it comes from
+`SITE.meeting` in `js/site.js` and always heads Upcoming.
+
+**The events there now are placeholders**, each with `example: true`, which
+shows an *Example* tag on it and a line under the list saying so. Replace them
+with real ones (or delete the `example: true` lines); once none is left, the
+line goes. Examples are never told to search engines; real events are, as
+structured data.
 
 ## Links are relative
 

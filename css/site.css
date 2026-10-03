@@ -164,6 +164,36 @@ main{padding:0}
 .btn.alt:hover{background:var(--white);border-color:var(--ink);color:var(--ink)}
 
 
+/* ---------- events (events.html, built by js/events.js) ---------- */
+.eventlist{border:1px solid var(--line);border-radius:var(--r);background:var(--white);overflow:hidden}
+.event{display:flex;align-items:center;gap:1.15rem;padding:1.05rem 1.35rem}
+.event + .event{border-top:1px solid var(--line-soft)}
+.event.past{opacity:.65}
+.event.weekly{background:var(--off)}
+
+/* The date leads the detail line, written out plainly. */
+.event-date{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+.event-body{min-width:0;flex:1 1 auto}
+.event-body h3{font-size:0.9375rem;font-weight:600;color:var(--ink);margin:0;display:inline}
+.event-where{font-size:0.8125rem;color:var(--muted);margin-top:0.25rem}
+.event-desc{font-size:0.875rem;color:var(--body);margin-top:0.35rem;max-width:36rem;line-height:1.6}
+.tag{
+  display:inline-block;margin-left:0.5rem;padding:0.1rem 0.45rem;border-radius:var(--r);
+  font-size:0.5625rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;
+  color:#fff;background:var(--accent);vertical-align:2px;
+}
+/* A placeholder, so nobody turns up to it: outlined, not filled. */
+.tag.example{color:var(--muted);background:transparent;border:1px dashed var(--faint)}
+.event-action{flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-end;gap:0.4rem}
+.chip{
+  display:inline-flex;align-items:center;padding:0.35rem 0.85rem;border-radius:9999px;
+  border:1px solid var(--line);background:var(--white);color:var(--muted);
+  font-size:0.8125rem;font-weight:500;white-space:nowrap;transition:color .15s,border-color .15s;
+}
+.chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.empty{padding:1.35rem;color:var(--muted);font-size:0.9375rem}
+.note{margin-top:0.75rem;font-size:0.875rem;color:var(--muted)}
+
 /* ---------- cards ---------- */
 .grid{display:grid;gap:0.85rem}
 .g2{grid-template-columns:repeat(auto-fit,minmax(18rem,1fr))}
@@ -253,6 +283,8 @@ footer a:hover{color:#fff}
   .masthead .facts{gap:0 1.35rem}
   .band{padding:2.5rem 0}
   .block + .block{margin-top:2.5rem}
+  .event{flex-direction:column;align-items:flex-start;gap:0.75rem;padding:0.95rem 1rem}
+  .event-action{flex-direction:row;flex-wrap:wrap;align-items:flex-start}
   .footgrid{grid-template-columns:1fr;gap:2rem}
   td:first-child{width:auto}
   table,tbody,tr,td,th{display:block}

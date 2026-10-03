@@ -13,8 +13,9 @@ for what GitHub Pages and the missing events platform need:
 | `js/events.js` reads the events from a list in the file instead of asking chessdirector's server | Same reason; the rows it draws are the same markup and styles |
 | No "Add to calendar" link on the home page | It was chessdirector's calendar feed |
 | `events.html` is a page of its own | On chessdirector it only redirected to the platform |
+| The fonts (Playfair Display, Gothic A1) are files in `fonts/`, loaded by `css/fonts.css`, instead of from Google Fonts | So they show even where Google Fonts is blocked — the same faces and weights, from Google's own files and rules |
 
-Everything else — the stylesheet, `js/site.js`, `js/nav.js`, the images, and
+Everything else — `css/site.css`, `js/site.js`, `js/nav.js`, the images, and
 every word on the pages — is the same file. The page addresses in each head
 (`rel=canonical`, `og:url`) still name `uchicago.chessdirector.com`, the
 club's main site.
